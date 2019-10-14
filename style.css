@@ -1,1 +1,130 @@
-body
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    display: flex;
+
+}
+a{
+    text-decoration: none;
+}
+header{
+    background: #c2ccc5;
+    padding: 20px 0;
+}
+.header-container{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header-container a{
+    color: #000;
+    font-size: 15px;
+    padding: 25px 6px;
+    margin-right: 55px;
+
+}
+.header-container a:hover{
+    background: #f5e85d;
+}
+#menu-checkbox{
+    display: none;
+}
+ul{
+    display: flex;
+}
+.top-slide{
+    background: url(img/bg.jpg) no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.top-container{
+    width: 60%;
+    margin: 0 auto;
+}
+.top-slide h2{
+    background: #f5e85d;
+    display: inline;
+    font-size: 60px;
+    padding: 0 13px;
+}
+.top-slide :nth-child(1){
+    margin-bottom: 10px;
+}
+.top-slide p{
+    background: #616055;
+    display: inline;
+    font-size: 20px;
+    padding: 0 5px;
+    color: azure;
+}
+.specialize-container{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.specialize-container h3{
+    font-size: 35px;
+}
+.specialize-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+@media screen and ( max-width: 620px) {
+    .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-menu{
+        display: none;
+    }
+    .main-menu li{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+    .main-menu a{
+        display: block;
+        padding: 8px;
+    }
+    .toggle-button{
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: #000;
+    }
+    .toggle-button:after{
+        content: attr(data-open);
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+        content: attr(data-close);
+    }
+    .header-container a{
+        margin-right: -50px;
+    }
+    .main-menu{
+        position: relative;
+        top: 20px;
+        right: 8px;
+    }
+}
