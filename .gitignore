@@ -1,0 +1,6 @@
+.vscode
+.vsco
+*.scss
+css
+*.map
+node_modules

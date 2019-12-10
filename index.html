@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Portfolio</title>
 </head>
 <body>
     <header>
+        
         <div class="header-container">
             <div class="logo">
-                <img src="img/qwe.PNG" alt="logo">
+                <img src="./assets/images/qwe.PNG" alt="logo">
 
             </div>
             <input type="checkbox" id="menu-checkbox">
@@ -20,51 +20,89 @@
                 <label for="menu-checkbox" class="toggle-button"
                 data-open="menu" data-close="close" onclick></label>
                 <ul class="main-menu">
-                    <li><a href="">GITHUB</a></li>
-                    <li><a href="">INSTAGRAM</a></li>
-                    <li><a href="">STEAM</a></li>
-                    <li><a href="">VK</a></li>
+                    <li><a href="https://github.com/Qairkhan/">GITHUB</a></li>
+                    <li><a href="https://www.instagram.com/qairkhan/">INSTAGRAM</a></li>
+                    <li><a href="https://steamcommunity.com/id/dafuqq4/">STEAM</a></li>
+                    <li><a href="https://www.vk.com/Qairkhan">VK</a></li>
                 </ul>
             </nav>
+            <div class="head-wrapper">
+                <div class="head-name">Qairkhan Shynggys</div>
+                </div>
         </div>
     </header>
-    <main>
-        <section class="top-slide">
-            <div class="top-container">
-                    <div><h2>Education</h2></div>
-                    <div><p>Bsuir 2012-2017</p></div>
-                    <div><p>bsuir 2017-2018</p></div>
-                    <div><p>army 2018-2019</p></div>
+  <div class="wrapper">
+       <main>
+      <section class="ed">
+        <button id="ed_btn" class="education-btn">Education</button>
+        <div id="ed_panel" class="panel">
+          <ul class="ed_list">
+            <li>School <br><span class="ed_years">2001 - 2012</span></li>
+            <li>University (BSUIR) <br><span class="ed_years">2012 - 2017</span></li>
+            <li>Master Degri <br><span class="ed_years">2017 - 2018</span></li>
+          </ul>
+        </div>
+      </section>
+      <section class="proj">
+        <div class="proj-title">
+          Projects
+        </div>
+        <div id="swipezone" class="slider_wrap">
+
+          <div class="proj-slider fade">
+            <div class="proj-slider-descr">
+              <div class="proj-slider-descr_title">
+                Repair Project <button class="sw_button" id="sw_btn_1">Show<br>description</button>
+              </div>
+              <div class="proj-slider-descr_text">
+                <p>Desktop ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="proj-slider-descr_mob" id="descr_1">
+                <p>Mobile ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="proj-slider-descr-tap">Tap image to see more --></div>
             </div>
-            
-        </section>
-        <section class="specialize">
-            <div class="specialize-container">
-                <h3>THEYALOW AND REpit desig</h3>
-                <div class="specialize-card">
-                    <div class="card">
-                        <div class="top-card">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bottom-card">
-                            <p class="first-p">THEYALLOW</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                            <div class="top-card">
-                                <img src="" alt="">
-                            </div>
-                            <div class="bottom-card">
-                                <p class="first-p">REPIT DESIGN</p>
-                            </div>
-                        </div>
+            <button class="proj-slider_btn" id="re_btn"><img src="./assets/images/repair-screen.jpg"></button>
+          </div>
 
-                </div>
-
+          <div class="proj-slider fade">
+            <div class="proj-slider-descr">
+              <div class="proj-slider-descr_title">
+                Theyalow Project <button class="sw_button" id="sw_btn_2">Show<br>description</button>
+              </div>
+              <div class="proj-slider-descr_text">
+                <p>Desktop ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="proj-slider-descr_mob" id="descr_2">
+                <p>Mobile ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="proj-slider-descr-tap">Tap image to see more --></div>
             </div>
+            <button class="proj-slider_btn" id="th_btn"><img src="./assets/images/theyalow-screen.png"></button>
+          </div>
 
-        </section>
+          <!-- Next and previous buttons -->
+          <a class="proj-prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="proj-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </section>
+      <footer class="footer">Portfolio - 2019</footer>
+
     </main>
-    <script src="script.js"></script>
+  </div>
+  <div class="iframe-wrap" id="iwrap">
+    <iframe class="iframe" id="iframe" frameborder="0"></iframe>
+    <button class="iframe-button" id="back-button">Back</button>
+    <button class="iframe-button" id="mode-button">Desktop</button>
+  </div>
+  <script src="portfolio.js"></script>
 </body>
 </html>
